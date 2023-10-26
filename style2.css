@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url(valorant.jpg);
+    background-image: url(aestheticpictures.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -36,12 +36,20 @@ nav a {
 main {
     padding: 20px;
     color: #00e8fd;
+}
+h1 {
+    padding: 20px;
+    color:#00e8fd;
+    text-align:center;
+    text-transform: uppercase;
+}
+p {
+    padding: 10px;
+    color:#00e8fd;
     text-align: center;
 }
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+img {
+    position: sticky;
+    width: 400px;
+    height: 500px;
 }

@@ -27,3 +27,13 @@ main {
 main img {
     width: 100%;
 }
+
+
+@media (max-width: 576px) {
+    main {
+        flex-direction: column;
+    }
+    header h1 {
+        color: aqua;
+    }
+}

@@ -17,3 +17,12 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+main {
+    display: flex;
+}
+
+
+main img {
+    width: 100%;
+}

@@ -41,7 +41,35 @@
 
         console.log(add(1, 3));
 
-        
+        console.log(add(x, y));
+
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        console.log(multiply(4, 5));
+
+        function sum(a, b, c, d) {
+            return a + b + c + d;
+        }
+
+        console.log(sum(1, 2, 3, 4));
+
     </script>
+
+    <br></br>
+    <h3>Type your Name</h3>
+    name: <input type="text" id="name"> 
+    <button onclick="showName()">Send It!!</button>
+
+    <p id="np"></p>
+
+    <script>
+        function showName() {
+            let name = document.getElementById("name").value;
+            document.getElementById("np").innerHTML = "your name is " + name;
+        }
+    </script>
+
 </body>    
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Learn JS Part 4</title>
+</head>
+<body onload="functionLoad()">
+    <h1>Learn JS Part 4</h1>
+
+    <button onclick="functionClick()">Click Me !!!</button>
+
+    <button onmouseover="functionHover()">Hover over me...</button>
+
+    <button onmouseout="functionOut()">Mouse Out Me..</button>
+
+    <br></br>
+    name: <input type="text" id="name" onkeydown="functionDown()">
+
+    <button onload="functionLoad()">Try On Load Me...</button>
+
+
+    <script>
+        function functionClick() {
+            alert("Hi! U Click Me Dude :3");
+        }
+
+        function functionHover() {
+            console.log("Hi Dude!, you hover over the button!!");
+        }
+
+        function functionOut() {
+            console.log("Hi, you Hover over the button");
+        }
+
+        function functionDown() {
+            console.log("You Press a Key");
+            document.getElementById("name").style.borderColor = "red";
+        }
+
+        function functionLoad() {
+            alert("HIIIII WELCOME TO MOBEL LEGEND XD");
+        }
+    </script>
+</body>    
+</html>
+

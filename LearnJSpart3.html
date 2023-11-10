@@ -6,13 +6,13 @@
     <title>Learn JS part 3</title>
 </head>
 <body>
-    <p id="demo"></p>
     <h1>Learn JS part 3</h1>
+    <p id="demo"></p>
 </body>
 <script>
     // Create an Object Name Student With this Properties:
     // name, NIM, Major, religion, address (fill these with your info)
-const person = {
+const student = {
     Name: "Enricco Zefanya",
     NIM: "2282026",
     Major: "Sistem Informasi",
@@ -20,8 +20,15 @@ const person = {
     Address: "Jalan Nagrak Wetan, No 8"
 };
 
-document.getElementById("demo").innerHTML = 
-person.Name + " Is " + person.NIM + " My NIM Is " + person.Major + " My Major Is " + person.Religion + " My Religion Is " + person.Address + " My Address In "
 </script>    
 <!--Display the data/value below:-->
+<p>Name: <script>document.write(student.Name)</script></p>
+<p>NIM: <span id="nim"></span></p>
+<p>Major: <script>document.write(student.Major)</script></p>
+<p>Religion: <script>document.write(student.Religion)</script></p>
+<p>Address: <script>document.write(student.Address)</script> </p>
+
+<script>
+    document.getElementById("nim").innerHTML = student.NIM;
+</script>
 </html>

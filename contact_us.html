@@ -2,44 +2,29 @@
 <html lang="en">
 <head>
     <title>Contact Us - Koyy's Pages</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="biodata.html">Biodata</a></li>
-                <li><a href="contact_us.html">Contact Me</a></li>
-                <li><a href="free_content.html">Free Content</a></li>
-                <li><a href="https://fti.unai.edu" target="_blank">FTI UNAI</a></li>
-                <li><a href="https://unai.edu" target="_blank">UNAI Website</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
         <h1>Contact Us</h1>
         <form>
-            <label for="full-name">Full Name</label>
+            <label for="full-name">Full Name</label><br>
             <input type="text" id="full-name" name="full-name" required>
-
-            <label for="email">E-mail</label>
+            
+            <label for="email">E-mail</label><br>
             <input type="email" id="email" name="email" required>
 
-            <label for="username">Username</label>
+            <label for="username">Username</label><br>
             <input type="text" id="username" name="username" required>
 
-            <label for="password">Password</label>
+            <label for="password">Password</label><br>
             <input type="password" id="password" name="password" required>
 
-            <label>Gender</label>
+            <label>Gender</label><br>
             <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label>
 
-            <label for="religion">Religion</label>
+            <label for="religion">Religion</label><br>
             <select id="religion" name="religion">
                 <option value="Kristen">Kristen</option>
                 <option value="muslim">Muslim</option>
@@ -48,10 +33,10 @@
                 <option value="other">Other</option>
             </select>
 
-            <label for="address">Address</label>
+            <label for="address">Address</label><br>
             <textarea id="address" name="address" rows="4" required></textarea>
 
-            <label>Hobbies</label>
+            <label>Hobbies</label><br>
             <input type="checkbox" id="reading" name="hobbies[]" value="reading">
             <label for="reading">Reading</label>
             <input type="checkbox" id="Listening Music" name="hobbies[]" value="Listening Music">
@@ -62,7 +47,62 @@
             <input type="submit" value="Save">
         </form>
     </main>
-
+    <script>
+        function validateForm() {
+            const fullName = document.getElementById('full-name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const genderMale = document.getElementById('male').checked;
+            const genderFemale = document.getElementById('female').checked;
+            const address = document.getElementById('address').value.trim();
+    
+            if (fullName === '') {
+                alert('Full Name field is not filled');
+                return false;
+            }
+    
+            if (email === '') {
+                alert('Email field is not filled');
+                return false;
+            }
+    
+            if (username === '') {
+                alert('Username field is not filled');
+                return false;
+            }
+    
+            if (password === '') {
+                alert('Password field is not filled');
+                return false;
+            }
+    
+            if (!(genderMale || genderFemale)) {
+                alert('Gender field is not filled');
+                return false;
+            }
+    
+            if (address === '') {
+                alert('Address field is not filled');
+                return false;
+            }
+    
+            return true;
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            const saveButton = document.querySelector('input[type="submit"]');
+            saveButton.addEventListener('click', function (event) {
+                event.preventDefault();
+    
+                const isFormValid = validateForm();
+                if (isFormValid) {
+                    console.log('Form is valid. Proceed with submission.');
+                }
+            });
+        });
+    </script>
+    
     <footer>
         <p>&copy; Koyyy's Pages - Copyright Who Stealing My Codes. Get A Life Bro.. Capek Bikin Ginian, Jadi Tolong Jan Copy Codingan Aku Yah Temen2 Thanks Minna!!</p>
     </footer>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn VueJS</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">{{ message }} {{ name }} {{ NIM }}</div>
+    
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    name: 'Koyyy',
+                    NIM: '2282026'
+                }
+            }
+        }).mount('#app')
+
+        
+    </script>
+</body>
+</html>

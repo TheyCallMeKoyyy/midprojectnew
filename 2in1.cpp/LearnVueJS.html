@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn VueJS</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .red {
+            color: cyan;
+        }
+    </style>
 </head>
 <body>
     <div id="app">{{ message }} from {{ name }} My NIM is {{ NIM }}
@@ -16,6 +21,22 @@
         <br><br>
         Text Message: <input type="text" v-model="textMessage">
         <h3>{{ textMessage }} </h3>
+
+        Name: <input type="text" v-model="name">
+
+        <h2 v-if="on">This text will appears if the value of on is true</h2>
+        <h2 v-else>This text will appears if the value of on is false</h2>
+
+        <br>
+        <hr>
+        age: <input type="text" v-model="age">
+        <h3 v-if="age <= 17">You Are Still Young</h3>
+        <h3 v-else>You are old</h3>
+
+        <br>
+        <hr>
+        <h2 v-bind:class="textColor">This Is Title</h2>
+        
         
     </div>
 
@@ -25,6 +46,8 @@
         createApp({
             data() {
                 return {
+                    textColor: 'cyan',
+                    on: false,
                     textMessage: '',
                     message: 'Hello Vue',
                     //add three more properties and display them!

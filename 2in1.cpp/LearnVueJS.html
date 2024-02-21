@@ -7,17 +7,44 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">{{ message }} from {{ name }} My NIM is {{ NIM }}</div>
-    
+    <div id="app">{{ message }} from {{ name }} My NIM is {{ NIM }}
+        <br>
+        hoobies: {{ hoobies }}
+        <br>
+        Address: {{ address }}
+
+        <br><br>
+        Text Message: <input type="text" v-model="textMessage">
+        <h3>{{ textMessage }} </h3>
+        
+    </div>
+
     <script>
         const { createApp } = Vue
 
         createApp({
             data() {
                 return {
-                    message: 'Hello BICTH',
+                    textMessage: '',
+                    message: 'Hello Vue',
+                    //add three more properties and display them!
                     name: 'Koyyy',
-                    NIM: '2282026'
+                    NIM: '2282026',
+                    //add a property using array data types
+                    //add a minimum of 3 elements (items)
+                    age: '22',
+                    gender: 'male',
+                    hoobies: ['singing', 'playing valorant', 'sleeping'],
+                    
+                    //add a property with object data type
+                    //add a minimum of 3 properties
+                    address: {
+                        street: 'Jl. Kolonel Masturi No. 288, Parongpong',
+                        regency: 'Bandung Barat',
+                        province: 'West Java'
+                    }
+
+
                 }
             }
         }).mount('#app')
